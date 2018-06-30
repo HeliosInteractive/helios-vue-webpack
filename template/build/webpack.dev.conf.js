@@ -63,7 +63,13 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         from: path.resolve(__dirname, '../static'),
         to: config.dev.assetsSubDirectory,
         ignore: ['.*']
-      }
+      }{{#garuda}},
+      {
+        // serve garuda.config.json and garuda.local.config.json in dev mode
+        from: path.resolve(__dirname, '../src'),
+        test: /garuda(.local)?\.config\.json$/,
+        to: ''
+      }{{/garuda}}
     ])
   ]
 })

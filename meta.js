@@ -57,15 +57,15 @@ module.exports = {
       message: 'Vue build',
       choices: [
         {
-          name: 'Runtime + Compiler: recommended for most users',
-          value: 'standalone',
-          short: 'standalone',
-        },
-        {
           name:
             'Runtime-only: about 6KB lighter min+gzip, but templates (or any Vue-specific HTML) are ONLY allowed in .vue files - render functions are required elsewhere',
           value: 'runtime',
           short: 'runtime',
+        },
+        {
+          name: 'Runtime + Compiler: recommended for noobs',
+          value: 'standalone',
+          short: 'standalone',
         },
       ],
     },
@@ -73,6 +73,35 @@ module.exports = {
       when: 'isNotTest',
       type: 'confirm',
       message: 'Install vue-router?',
+    },
+    store: {
+      when: 'isNotTest',
+      type: 'confirm',
+      message: 'Install vuex (store)?'
+    },
+    reach: {
+      when: 'isNotTest',
+      type: 'confirm',
+      message: 'Install Reach?',
+      default: false
+    },
+    crow: {
+      when: 'isNotTest',
+      type: 'confirm',
+      message: 'Install Crow (logger)?',
+      default: false
+    },
+    garuda: {
+      when: 'isNotTest',
+      type: 'confirm',
+      message: 'Install Garuda (config)?',
+      default: false
+    },
+    garudaAdmin: {
+      when: 'isNotTest',
+      type: 'confirm',
+      message: 'Install Garuda Admin (config admin view)?',
+      default: false
     },
     lint: {
       when: 'isNotTest',
@@ -85,14 +114,14 @@ module.exports = {
       message: 'Pick an ESLint preset',
       choices: [
         {
-          name: 'Standard (https://github.com/standard/standard)',
-          value: 'standard',
-          short: 'Standard',
-        },
-        {
           name: 'Airbnb (https://github.com/airbnb/javascript)',
           value: 'airbnb',
           short: 'Airbnb',
+        },
+        {
+          name: 'Standard (https://github.com/standard/standard)',
+          value: 'standard',
+          short: 'Standard',
         },
         {
           name: 'none (configure it yourself)',
@@ -170,6 +199,7 @@ module.exports = {
     'test/unit/setup.js': "unit && runner === 'jest'",
     'test/e2e/**/*': 'e2e',
     'src/router/**/*': 'router',
+    'src/garuda.config.json': 'garuda',
   },
   complete: function(data, { chalk }) {
     const green = chalk.green

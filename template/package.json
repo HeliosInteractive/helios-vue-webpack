@@ -25,8 +25,25 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "vue": "^2.5.2"{{#router}},
-    "vue-router": "^3.0.1"{{/router}}
+    {{#reach}}
+    "@helios-interactive/reachjs": "^5.2.0",
+    {{/reach}}
+    {{#crow}}
+    "@helios-interactive/crow": "^1.2.0",
+    {{/crow}}
+    {{#garuda}}
+    "@helios-interactive/garuda-js": "^1.1.0",
+    {{/garuda}}
+    {{#garudaAdmin}}
+    "@helios-interactive/vue-garuda-admin": "^1.1.0",
+    {{/garudaAdmin}}
+    {{#router}}
+    "vue-router": "^3.0.1",
+    {{/router}}
+    {{#store}}
+    "vuex": "^3.0.1",
+    {{/store}}
+    "vue": "^2.5.2"
   },
   "devDependencies": {
     {{#lint}}

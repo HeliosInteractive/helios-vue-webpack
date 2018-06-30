@@ -1,0 +1,16 @@
+{
+  {{#reach}}
+  "reach": {
+    "api_key": "",
+    "url": "https://reach.heliossf.com/api",
+    "appActivationId": ""
+  },
+  {{/reach}}
+  {{#crow}}
+  "crow": {
+    "url": "http://localhost:4000",
+    "application": "{{ name }}"
+  },
+  {{/crow}}
+  "app": {}
+}
