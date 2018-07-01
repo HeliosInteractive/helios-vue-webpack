@@ -19,3 +19,8 @@ selenium-debug.log
 *.ntvs*
 *.njsproj
 *.sln
+
+{{#garuda}}
+# Ignore local config
+/src/garuda.local.config.json
+{{/garuda}}

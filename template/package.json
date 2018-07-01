@@ -25,12 +25,29 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "vue": "^2.5.2"{{#router}},
-    "vue-router": "^3.0.1"{{/router}}
+    {{#reach}}
+    "@helios-interactive/reachjs": "^5.2.0",
+    {{/reach}}
+    {{#crow}}
+    "@helios-interactive/crow": "^1.2.0",
+    {{/crow}}
+    {{#garuda}}
+    "@helios-interactive/garuda-js": "^1.1.0",
+    {{/garuda}}
+    {{#garudaAdmin}}
+    "@helios-interactive/vue-garuda-admin": "^1.1.0",
+    {{/garudaAdmin}}
+    {{#router}}
+    "vue-router": "^3.0.1",
+    {{/router}}
+    {{#store}}
+    "vuex": "^3.0.1",
+    {{/store}}
+    "vue": "^2.5.2"
   },
   "devDependencies": {
     {{#lint}}
-    "babel-eslint": "^8.2.1",
+    "babel-eslint": "^7.2.3",
     "eslint": "^4.15.0",
     "eslint-friendly-formatter": "^3.0.0",
     "eslint-loader": "^1.7.1",
@@ -100,6 +117,7 @@
     "html-webpack-plugin": "^2.30.1",
     "webpack-bundle-analyzer": "^2.9.0",
     "node-notifier": "^5.1.2",
+    "node-sass": "^4.9.0",
     "postcss-import": "^11.0.0",
     "postcss-loader": "^2.0.8",
     "postcss-url": "^7.2.1",
@@ -108,6 +126,7 @@
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "ora": "^1.2.0",
     "rimraf": "^2.6.0",
+    "sass-loader": "^7.0.3",
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
     "vue-loader": "^13.3.0",
