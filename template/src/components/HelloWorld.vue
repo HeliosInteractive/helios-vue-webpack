@@ -1,8 +1,50 @@
 <template>
   <div class="hello">
     <h1>\{{ msg }}</h1>
+    <h2>Installed Components</h2>
+    {{#garudaAdmin}}<p>Tripple Tap the top left corner to view the admin panel</p>{{/garudaAdmin}}
     <h2>Essential Links</h2>
     <ul>
+      {{#reach}}
+      <li>
+        <a
+          href="https://www.npmjs.com/package/@helios-interactive/reachjs"
+          target="_blank"
+        >
+          Reach
+        </a>
+      </li>
+      {{/reach}}
+      {{#crow}}
+      <li>
+        <a
+          href="https://www.npmjs.com/package/@helios-interactive/crow"
+          target="_blank"
+        >
+          Crow
+        </a>
+      </li>
+      {{/crow}}
+      {{#garuda}}
+      <li>
+        <a
+          href="https://www.npmjs.com/package/@helios-interactive/garuda-js"
+          target="_blank"
+        >
+          Garuda
+        </a>
+      </li>
+      {{/garuda}}
+      {{#garudaAdmin}}
+      <li>
+        <a
+          href="https://www.npmjs.com/package/@helios-interactive/vue-garuda-admin"
+          target="_blank"
+        >
+          Garuda Admin
+        </a>
+      </li>
+      {{/garudaAdmin}}
       <li>
         <a
           href="https://vuejs.org"
@@ -88,7 +130,7 @@ export default {
   name: 'HelloWorld',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Helios Vue.js App'
     }
   }
 }

@@ -6,6 +6,9 @@
     {{else}}
     <HelloWorld/>
     {{/router}}
+    {{#garudaAdmin}}
+    <triple-tap/>
+    {{/garudaAdmin}}
   </div>
 </template>
 
@@ -14,11 +17,16 @@
 import HelloWorld from './components/HelloWorld'
 
 {{/unless}}
+{{#garudaAdmin}}
+import TripleTap from '@/components/TripleTap';
+
+{{/garudaAdmin}}
 export default {
-  name: 'App'{{#router}}{{else}},
+  name: 'App',
   components: {
-    HelloWorld
-  }{{/router}}
+    {{#router}}{{else}}HelloWorld,{{/router}}
+    {{#garudaAdmin}}TripleTap,{{/garudaAdmin}}
+  }
 }
 </script>
 
